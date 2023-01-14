@@ -6,8 +6,11 @@ public class PlayerControl : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anm;
-    private float dX = 0f;
+    private float dX;
     private SpriteRenderer sprite;
+
+    private enum MovementState { idle, running, jumping, falling }
+
     [SerializeField]private float moveSpeed = 7f;
     [SerializeField]private float jumpForce = 12f;
 
@@ -36,20 +39,32 @@ public class PlayerControl : MonoBehaviour
 
     private void UpdateAnimationUpdate()
     {
+        MovementState state; 
+
         if (dX > 0f)
         {
-            anm.SetBool("running", true);
+            state = MovementState.running;
             sprite.flipX = false;
         }
         else if (dX < 0f)
         {
-            anm.SetBool("running", true);
+            state = MovementState.running;
             sprite.flipX = true;
         }
         else
         {
-            anm.SetBool("running", false);
+            state = MovementState.idle;
         }
+
+        if (rb.velocity.y > .1f)
+        {
+            state = MovementState.jumping;
+        }
+        else if (rb.velocity.y < -.1f)
+        {
+            state = MovementState.falling;
+        }
+        anm.SetInteger("state", (int)state);
     }
 }
  
