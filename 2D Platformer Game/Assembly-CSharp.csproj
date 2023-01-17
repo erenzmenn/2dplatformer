@@ -56,13 +56,16 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\PlayerControl.cs" />
     <Compile Include="Assets\StickyPlatform.cs" />
     <Compile Include="Assets\Playerlife.cs" />
     <Compile Include="Assets\WpFollower.cs" />
     <Compile Include="Assets\StrawberryCollector.cs" />
     <Compile Include="Assets\CameraControl.cs" />
-    <Compile Include="Assets\Rotate.cs" />
+    <Compile Include="Assets\Finish.cs" />
+    <Compile Include="Assets\startMenu.cs" />
+    <Compile Include="Assets\EndMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -81,7 +84,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\8Bit Music - 062022\Notes.txt" />
+    <None Include="Assets\SFX\8Bit Music - 062022\Notes.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
